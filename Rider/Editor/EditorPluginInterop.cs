@@ -69,9 +69,9 @@ namespace Packages.Rider.Editor
           if (assembly == null) return null;
           var type = assembly.GetType(ourEntryPointTypeName);
           if (type == null) return null;
-          var field = type.GetField("LogPath", BindingFlags.NonPublic | BindingFlags.Static);
-          if (field == null) return null;
-          return field.GetValue(null) as string;
+          var @field = type.GetField("LogPath", BindingFlags.NonPublic | BindingFlags.Static);
+          if (@field == null) return null;
+          return @field.GetValue(null) as string;
         }
         catch (Exception)
         {
